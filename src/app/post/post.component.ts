@@ -8,7 +8,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements OnInit {
   post?: Post;
@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
 
   getPost(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.postService.getPost(id).subscribe(post => this.post = post);
+    this.postService.getPost(id).subscribe((post) => (this.post = post));
   }
 
   openPostModal(): void {
@@ -38,7 +38,7 @@ export class PostComponent implements OnInit {
     private route: ActivatedRoute,
     private postService: PostService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getPost();
@@ -51,5 +51,4 @@ export class PostComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
 }

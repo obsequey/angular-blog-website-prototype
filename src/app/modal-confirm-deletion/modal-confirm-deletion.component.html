@@ -1,13 +1,9 @@
 <div (click)="closeModal()" class="modal-container">
-    <div class="modal" (click)="stopClosingEvent($event)">
-        <h3 class="modal__title">Do you really wish to delete the post?</h3>
+  <div class="modal" (click)="stopClosingEvent($event)">
+    <h3 class="modal__title">Do you really wish to delete the post?</h3>
 
-        <button class="modal__confirm" (click)="deletePost()">
-            Delete
-        </button>
+    <button class="modal__confirm" (click)="deletePost()">Delete</button>
 
-        <button class="modal__refuse" (click)="closeModal()">
-            No
-        </button>
-    </div>
+    <button class="modal__refuse" (click)="closeModal()">No</button>
+  </div>
 </div>

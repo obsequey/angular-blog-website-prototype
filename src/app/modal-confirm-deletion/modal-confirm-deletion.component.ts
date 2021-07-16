@@ -6,7 +6,7 @@ import { Post } from '../post';
 @Component({
   selector: 'app-modal-confirm-deletion',
   templateUrl: './modal-confirm-deletion.component.html',
-  styleUrls: ['./modal-confirm-deletion.component.scss']
+  styleUrls: ['./modal-confirm-deletion.component.scss'],
 })
 export class ModalConfirmDeletionComponent implements OnInit {
   @Input() postId?: number;
@@ -31,9 +31,7 @@ export class ModalConfirmDeletionComponent implements OnInit {
     this.delete.emit();
   }
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

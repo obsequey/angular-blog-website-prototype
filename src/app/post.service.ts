@@ -7,13 +7,13 @@ import { tap } from 'rxjs/operators';
 import { Post } from './post';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostService {
   postsUrl = 'api/posts';
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
   getPost(id: number): Observable<Post> {
@@ -26,9 +26,11 @@ export class PostService {
   }
 
   createPost(post: Post): Observable<Post> {
-    return this.http.post<Post>(this.postsUrl, post, this.httpOptions).pipe(
-      tap((newPost: Post) => console.log(`Added post w/ id=${newPost.id}`))
-    );
+    return this.http
+      .post<Post>(this.postsUrl, post, this.httpOptions)
+      .pipe(
+        tap((newPost: Post) => console.log(`Added post w/ id=${newPost.id}`))
+      );
   }
 
   deletePost(id: number): Observable<Post> {
@@ -43,11 +45,10 @@ export class PostService {
 
   updatePost(post: Post): Observable<Post> {
     const url = `${this.postsUrl}/${post.id}`;
-    return this.http.put<Post>(url, post, this.httpOptions).pipe(
-      tap(_ => console.log(`Deleted post id=${post.id}`))
-    );
+    return this.http
+      .put<Post>(url, post, this.httpOptions)
+      .pipe(tap((_) => console.log(`Deleted post id=${post.id}`)));
   }
 
-  constructor(private http: HttpClient, private location: Location) { }
-
+  constructor(private http: HttpClient, private location: Location) {}
 }

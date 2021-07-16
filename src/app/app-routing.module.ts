@@ -6,12 +6,11 @@ import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   { path: '', component: BlogComponent },
-  { path: 'post/:id', component: PostComponent }
+  { path: 'post/:id', component: PostComponent },
 ];
-
 
 @NgModule({
   exports: [RouterModule],
-  imports: [RouterModule.forRoot(routes)]
+  imports: [RouterModule.forRoot(routes)],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

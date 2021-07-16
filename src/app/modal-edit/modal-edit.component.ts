@@ -7,7 +7,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-modal-edit',
   templateUrl: './modal-edit.component.html',
-  styleUrls: ['./modal-edit.component.scss']
+  styleUrls: ['./modal-edit.component.scss'],
 })
 export class ModalEditComponent implements OnInit {
   @Input() post?: Post;
@@ -24,10 +24,9 @@ export class ModalEditComponent implements OnInit {
     event.stopPropagation();
   }
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // Updates the current post or creates a new one
   onSubmitForm(form: NgForm): void {
@@ -36,5 +35,4 @@ export class ModalEditComponent implements OnInit {
     }
     return;
   }
-
 }

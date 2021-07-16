@@ -1,73 +1,73 @@
 .posts-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .post-card {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 0 2rem 3rem;
-    margin: 1rem -2rem;
-    border-radius: 8px;
-    transition: all .1s ease-in;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 0 2rem 3rem;
+  margin: 1rem -2rem;
+  border-radius: 8px;
+  transition: all 0.1s ease-in;
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 0 80px 10px rgba(0, 0, 0, 0.2);
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 80px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    &:active {
-        transform: translate3d(0, 3px, 0);
-    }
+  &:active {
+    transform: translate3d(0, 3px, 0);
+  }
 
-    &__title {
-        font-size: 1.25rem;
-        display: inline-block;
-        max-height: 3em;
-        overflow: hidden;
-    }
+  &__title {
+    font-size: 1.25rem;
+    display: inline-block;
+    max-height: 3em;
+    overflow: hidden;
+  }
 
-    &__content {
-        display: inline-block;
-        // 5 rem = 5 lines of text are visible
-        // 1.4 line-height
-        // 1em *default* top padding of paragraph
-        max-height: calc(5rem * 1.4 + 1em);
-        overflow: hidden;
-    }
+  &__content {
+    display: inline-block;
+    // 5 rem = 5 lines of text are visible
+    // 1.4 line-height
+    // 1em *default* top padding of paragraph
+    max-height: calc(5rem * 1.4 + 1em);
+    overflow: hidden;
+  }
 }
 
 $button: lightgrey;
 $button-size: 50px;
 
 .round-button {
-    width: $button-size;
-    height: $button-size;
-    background: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid $button;
-    border-radius: 100%;
-    transition: .2s ease-in-out;
-    position: relative;
-    
-    &:hover,
-    &:focus {
-        background-color: $button;
-    }
+  width: $button-size;
+  height: $button-size;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid $button;
+  border-radius: 100%;
+  transition: 0.2s ease-in-out;
+  position: relative;
 
-    &:active {
-        transform: translate3d(0, 2px, 0);
-    }
+  &:hover,
+  &:focus {
+    background-color: $button;
+  }
+
+  &:active {
+    transform: translate3d(0, 2px, 0);
+  }
 }
 
 .new-post {
-    position: fixed;
-    bottom: $button-size;
-    right: $button-size;
-    background: white;
-    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: $button-size;
+  right: $button-size;
+  background: white;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.1);
 }

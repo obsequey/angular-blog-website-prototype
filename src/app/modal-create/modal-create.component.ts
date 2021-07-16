@@ -6,7 +6,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-modal-create',
   templateUrl: './modal-create.component.html',
-  styleUrls: ['./modal-create.component.scss']
+  styleUrls: ['./modal-create.component.scss'],
 })
 export class ModalCreateComponent {
   // @Input() modalActionName: string = 'Submit';
@@ -19,13 +19,14 @@ export class ModalCreateComponent {
   closeModal(): void {
     this.close.emit();
   }
+  // Stops the event (click)
   // Don't close a modal
   // when the modal itself is clicked
   stopClosingEvent(event: Event): void {
     event.stopPropagation();
   }
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
   onSubmitForm(form: NgForm): void {
     this.postService.createPost(form.value).subscribe(() => {

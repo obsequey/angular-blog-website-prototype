@@ -23,7 +23,7 @@ import { ModalConfirmDeletionComponent } from './modal-confirm-deletion/modal-co
 
     ModalEditComponent,
     ModalCreateComponent,
-    ModalConfirmDeletionComponent
+    ModalConfirmDeletionComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,12 +33,12 @@ import { ModalConfirmDeletionComponent } from './modal-confirm-deletion/modal-co
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
-    AppRoutingModule
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

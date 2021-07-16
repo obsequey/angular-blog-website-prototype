@@ -1,43 +1,43 @@
 .round-button {
-    $button: lightgrey;
+  $button: lightgrey;
 
-    width: 40px;
-    height: 40px;
-    background: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid $button;
-    border-radius: 100%;
-    transition: .2s ease-in-out;
-    position: relative;
-    
-    &:hover,
-    &:focus {
-        background-color: $button;
-    }
+  width: 40px;
+  height: 40px;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid $button;
+  border-radius: 100%;
+  transition: 0.2s ease-in-out;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: $button;
+  }
 }
 
 .back {
-    &:active {
-        transform: translate3d(-3px, 0, 0);
-    }
+  &:active {
+    transform: translate3d(-3px, 0, 0);
+  }
 }
 
 .post {
-    &__top-header {
-        display: flex;
-    }
-    
-    &__toggle-edit,
-    &__delete {
-        margin-block-start: 3.5rem;
-        margin-inline-start: 2rem;
-        color: unset;
+  &__top-header {
+    display: flex;
+  }
 
-        &:active {
-            transform: translate3d(0, 2px, 0);
-        }
+  &__toggle-edit,
+  &__delete {
+    margin-block-start: 3.5rem;
+    margin-inline-start: 2rem;
+    color: unset;
+
+    &:active {
+      transform: translate3d(0, 2px, 0);
     }
+  }
 }

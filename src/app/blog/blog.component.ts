@@ -6,7 +6,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent implements OnInit {
   posts: Post[] = [];
@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
   showModal: boolean = false;
 
   getPosts(): void {
-    this.postService.getPosts().subscribe(posts => this.posts = posts);
+    this.postService.getPosts().subscribe((posts) => (this.posts = posts));
   }
 
   openPostModal(): void {
@@ -24,7 +24,7 @@ export class BlogComponent implements OnInit {
     this.showModal = false;
   }
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.getPosts();
@@ -33,5 +33,4 @@ export class BlogComponent implements OnInit {
   onSubmitForm(): void {
     this.getPosts();
   }
-
 }
