@@ -1,0 +1,60 @@
+$button-size: 40px;
+
+.round-button {
+    $button: lightgrey;
+    
+    position: relative;
+    width: $button-size;
+    height: $button-size;
+    background: none;
+    border: 1px solid $button;
+    border-radius: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    
+    &:hover,
+    &:focus {
+        background-color: $button;
+    }
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    max-width: 500px;
+    min-height: 300px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+
+    &__close {
+        position: absolute;
+        top: $button-size;
+        right: $button-size;
+    }
+
+    &__field-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
