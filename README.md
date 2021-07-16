@@ -1,5 +1,7 @@
 # AngularBlogWebsitePrototype
 
+Hosted on Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/1cb9f7e8-c668-42bc-9333-74ed219d4cfe/deploy-status)](https://app.netlify.com/sites/distracted-torvalds-829710/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
